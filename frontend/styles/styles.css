@@ -25,6 +25,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 28px 28px 0 28px;
+  height: 95vh;
 }
 
 a, input, button {
@@ -33,8 +34,8 @@ a, input, button {
   cursor: pointer;
   transition: 250ms ease-in-out;
   display: flex;
-  width: 210px;
-  height: 40px;
+  width: 100%;
+  height: 50px;
   background: linear-gradient(rgba(6, 4, 10, 0.8), rgba(6, 4, 10, 0.8)) padding-box,
   linear-gradient(to right,  rgba(255, 201, 10, 0.7), rgba(80, 22, 203, 1)) border-box;
   border-radius: 50em;
@@ -50,21 +51,29 @@ h2 {
   font-size: 2.4rem;
   font-weight: 700;
   color: var(--primary-font-color);
+  margin: 20px 0;
 }
 
 p {
   font-size: 1.6rem;
   font-weight: 400;
+  margin: 20px 0;
 }
 
 input {
   padding: 18px;
   outline-color: var(--focus-color);
+  cursor: default;
 }
 
 input::placeholder {
   padding: 18px;
   color: var(--primary-font-color);
+  text-align: center;
+}
+
+a, input {
+  margin-top: 50px;
 }
 
 a:focus, button:focus {
@@ -93,6 +102,21 @@ img {
   border-radius: 1.8rem;
   border: var(--border-color);
   background: var(--secondary-bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+}
+
+hr {
+  width: 80%;
+  background-color: var(--focus-color);
+  color: var(--focus-color);
+  border-color: var(--focus-color);
+}
+
+.create-container, .join-container {
+  height: 100%;
   padding: 20px;
 }
 
@@ -103,9 +127,39 @@ img {
 
   h2 {
     font-size: 3.2rem;
+    margin: 0 0 40px 0;
   }
 
   p {
     font-size: 2rem;
+    margin: 40px 0;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 90vh;
+  }
+
+  .create-container, .join-container {
+    width: 350px;
+    height: 320px;
+  }
+
+  .create-container p, .join-container p {
+    height: 90px;
+  }
+
+  a, input {
+    width: 280px;
+    height: 60px;
+    text-align: center;
+  }
+
+  hr {
+    height: 80%;
+    width: 1px;
   }
 }
